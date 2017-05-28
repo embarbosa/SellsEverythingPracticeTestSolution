@@ -1,0 +1,14 @@
+C:\Projects\SellsEverythingSolution\SellsEverything.Data\bin\Debug\SellsEverything.Data.dll.config
+C:\Projects\SellsEverythingSolution\SellsEverything.Data\bin\Debug\SellsEverything.Data.dll
+C:\Projects\SellsEverythingSolution\SellsEverything.Data\bin\Debug\SellsEverything.Data.pdb
+C:\Projects\SellsEverythingSolution\SellsEverything.Data\bin\Debug\EntityFramework.dll
+C:\Projects\SellsEverythingSolution\SellsEverything.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projects\SellsEverythingSolution\SellsEverything.Data\bin\Debug\SellsEverything.Helper.dll
+C:\Projects\SellsEverythingSolution\SellsEverything.Data\bin\Debug\SellsEverything.Model.dll
+C:\Projects\SellsEverythingSolution\SellsEverything.Data\bin\Debug\SellsEverything.Helper.pdb
+C:\Projects\SellsEverythingSolution\SellsEverything.Data\bin\Debug\SellsEverything.Model.pdb
+C:\Projects\SellsEverythingSolution\SellsEverything.Data\bin\Debug\EntityFramework.xml
+C:\Projects\SellsEverythingSolution\SellsEverything.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projects\SellsEverythingSolution\SellsEverything.Data\obj\Debug\SellsEverything.Data.csprojResolveAssemblyReference.cache
+C:\Projects\SellsEverythingSolution\SellsEverything.Data\obj\Debug\SellsEverything.Data.dll
+C:\Projects\SellsEverythingSolution\SellsEverything.Data\obj\Debug\SellsEverything.Data.pdb

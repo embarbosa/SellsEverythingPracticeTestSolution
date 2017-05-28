@@ -1,0 +1,178 @@
+﻿@model SellsEverything.Web.Models.CustomerViewModel
+@{
+    ViewBag.Title = "Sells Everything - Customer Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="padding-bottom:50px">Customer List</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                @Html.LabelFor(model => model.parameters.Name, htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-9">
+                    @Html.EditorFor(model => model.parameters.Name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.parameters.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                @Html.LabelFor(model => model.parameters.SelectedGenderID, htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-9">
+                    @Html.DropDownList("SelectedGenderID", new SelectList(Model.parameters.Genders, "GenderId", "Name", Model.parameters.SelectedGenderID.ToString()), "Select...", new { htmlAttributes = new { @class = "form-control", } })
+                    @Html.ValidationMessageFor(model => model.parameters.SelectedGenderID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                @Html.LabelFor(model => model.parameters.SelectedCityID, htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-9">
+                    @Html.DropDownList("SelectedCityID", new SelectList(Model.parameters.Cities, "CityId", "Name", Model.parameters.SelectedCityID.ToString()), "Select...", new { htmlAttributes = new { @class = "form-control", } })
+                    @Html.ValidationMessageFor(model => model.parameters.SelectedCityID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                @Html.LabelFor(model => model.parameters.SelectedRegionID, htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-9">
+                    @Html.DropDownList("SelectedRegionID", new SelectList(Model.parameters.Regions, "RegionId", "Name", Model.parameters.SelectedRegionID.ToString()), "Select...", new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.parameters.SelectedRegionID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                @Html.LabelFor(model => model.parameters.LastPurchaseFrom, htmlAttributes: new { @class = "control-label col-md-5" })
+                <div class="col-md-7">
+                    @Html.EditorFor(model => model.parameters.LastPurchaseFrom, new { htmlAttributes = new { @class = "form-control", @text = Model.parameters.LastPurchaseFrom } })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"><label class="control-label">&nbsp; until &nbsp;</label></div>
+        <div class="col-md-2">
+            @Html.EditorFor(model => model.parameters.LastPurchaseTo, new { htmlAttributes = new { @class = "form-control", @text = Model.parameters.LastPurchaseTo } })
+        </div>
+    </div>
+    <br />
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                @Html.LabelFor(model => model.parameters.SelectedClassificationID, htmlAttributes: new { @class = "control-label col-md-5" })
+                <div class="col-md-6">
+                    @Html.DropDownList("SelectedClassificationID", new SelectList(Model.parameters.Classifications, "ClassificationId", "Name", Model.parameters.SelectedClassificationID.ToString()), "Select...", new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.parameters.SelectedClassificationID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            @if (Model.parameters.IsAdmin)
+            {
+                <div class="form-group">
+                    @Html.LabelFor(model => model.parameters.SelectedSellerID, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.DropDownList("SelectedSellerID", new SelectList(Model.parameters.Sellers, "UserId", "Name", Model.parameters.SelectedSellerID.ToString()), "Select...", new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.parameters.SelectedSellerID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <br />
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <div class="col-md-12 text-right">
+                    <input type="submit" value="Search" class="btn btn-default" />
+                    @Html.ActionLink("Clear Fields", "Index", null, new { @value = "New Clear Fields", @class = "btn btn-default" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Classification)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Region)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastPurchase)
+        </th>
+
+        @if (Model.parameters.IsAdmin)
+        {
+            <th>
+                @Html.DisplayNameFor(model => model.Seller)
+            </th>
+        }
+
+    </tr>
+
+    @foreach (var item in Model.customers)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Classification)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Region)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastPurchase)
+            </td>
+
+            @if (Model.parameters.IsAdmin)
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.Seller)
+                </td>
+            }
+        </tr>
+    }
+
+</table>

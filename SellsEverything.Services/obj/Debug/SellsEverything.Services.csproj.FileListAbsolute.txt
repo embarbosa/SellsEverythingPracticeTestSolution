@@ -1,0 +1,13 @@
+C:\Projects\SellsEverythingSolution\SellsEverything.Services\bin\Debug\SellsEverything.Services.dll
+C:\Projects\SellsEverythingSolution\SellsEverything.Services\bin\Debug\SellsEverything.Services.pdb
+C:\Projects\SellsEverythingSolution\SellsEverything.Services\bin\Debug\SellsEverything.Data.dll
+C:\Projects\SellsEverythingSolution\SellsEverything.Services\bin\Debug\SellsEverything.Model.dll
+C:\Projects\SellsEverythingSolution\SellsEverything.Services\bin\Debug\EntityFramework.dll
+C:\Projects\SellsEverythingSolution\SellsEverything.Services\bin\Debug\SellsEverything.Data.pdb
+C:\Projects\SellsEverythingSolution\SellsEverything.Services\bin\Debug\SellsEverything.Model.pdb
+C:\Projects\SellsEverythingSolution\SellsEverything.Services\bin\Debug\EntityFramework.xml
+C:\Projects\SellsEverythingSolution\SellsEverything.Services\obj\Debug\SellsEverything.Services.csprojResolveAssemblyReference.cache
+C:\Projects\SellsEverythingSolution\SellsEverything.Services\obj\Debug\SellsEverything.Services.dll
+C:\Projects\SellsEverythingSolution\SellsEverything.Services\obj\Debug\SellsEverything.Services.pdb
+C:\Projects\SellsEverythingSolution\SellsEverything.Services\bin\Debug\SellsEverything.Helper.dll
+C:\Projects\SellsEverythingSolution\SellsEverything.Services\bin\Debug\SellsEverything.Helper.pdb

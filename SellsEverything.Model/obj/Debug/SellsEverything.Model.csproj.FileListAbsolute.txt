@@ -1,0 +1,5 @@
+C:\Projects\SellsEverythingSolution\SellsEverything.Model\bin\Debug\SellsEverything.Model.dll
+C:\Projects\SellsEverythingSolution\SellsEverything.Model\bin\Debug\SellsEverything.Model.pdb
+C:\Projects\SellsEverythingSolution\SellsEverything.Model\obj\Debug\SellsEverything.Model.csprojResolveAssemblyReference.cache
+C:\Projects\SellsEverythingSolution\SellsEverything.Model\obj\Debug\SellsEverything.Model.dll
+C:\Projects\SellsEverythingSolution\SellsEverything.Model\obj\Debug\SellsEverything.Model.pdb
